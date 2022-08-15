@@ -94,7 +94,7 @@ header ul {
 
 #menu-icon::after {
     color: var(--light);
-    content: 'menu';
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -137,6 +137,7 @@ header li a:hover::after {
     position: absolute;
     left: 50%;
     top: 50%;
+    text-align: center;
     transform: translate(-50%, -50%);
     color: var(--light);
     font-size: 50px;
@@ -452,6 +453,10 @@ footer {
     #menu.visible ul {
         height: 300px;
         display: block;
+    }
+
+    #menu #menu-icon::after {
+        content: 'menu';
     }
 
     #menu.visible #menu-icon::after {
