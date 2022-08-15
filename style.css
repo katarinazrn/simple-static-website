@@ -516,8 +516,14 @@ footer {
         width: 100%;
     }
 
+    #contact .container {
+        width: fit-content;
+    }
+
+
     #social {
-        margin: 20px auto;
+        font-size: 14px;
+        margin: 0;
         width: fit-content;
     }
 
