@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/logo.png">
+    <title>Band Name</title>
+</head>
+
+<body>
+
+    <div class="top">
+        <div class="background">
+            <img src="./assets/pexels-kaique-rocha-518389.jpg">
+        </div>
+        <header id="menu">
+            <span id="menu-icon" class="material-icons"></span>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
+        <h1>Band Name</h1>
+        <a id="scroll" class="material-icons" href="#about">arrow_downward</a>
+    </div>
+
+    <section id="about">
+        <div class="container columns">
+            <img class="column" src="./assets/band.jpg">
+            <div class="column">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat hic facilis ad possimus, accusantium
+                    blanditiis quae earum veritatis cum eaque nisi tempore inventore tenetur praesentium dolorem
+                    eligendi,
+                    vitae labore necessitatibus?
+                    Lorem ipsum dolor, adipisicing elit. Sed quae natus tempore assumenda fuga ea
+                    incidunt ad blanditiis rem? Saepe animi ullam provident iure minus esse fugiat doloremque quidem
+                    dolores!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="music">
+        <div class="container">
+            <div class="columns">
+                <div class="column songs">
+                    <h2>Album Name</h2>
+                    <ol>
+                        <li>first song</li>
+                        <li>second song</li>
+                        <li>third song name</li>
+                        <li>fourth song </li>
+                        <li>fifth song name</li>
+                        <li>name of the sixth song</li>
+                    </ol>
+                </div>
+                <img id="cover" class="column" src="./assets/album.jpg">
+            </div>
+            <div class="platforms">
+                <a href="#"><img src="./assets/icons8-spotify-24.png"><span>Spotify</span> </a>
+                <a href="#"><img src="./assets/icons8-music-50.png"><span>Apple Music</span></a>
+                <a href="#"> <img src="./assets/icons8-deezer-50.png"> <span>Deezer</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tour">
+        <div class="container">
+            <h2>Tour Dates</h2>
+            <div class="columns">
+                <ul class="column">
+                    <li>1.1. London, UK</li>
+                    <li>21.1. Paris, FR</li>
+                    <li>31.1. Madrid, ES</li>
+                </ul>
+                <ul class="column">
+                    <li>3.4. Berlin, DE</li>
+                    <li>11.5. Viena, AU</li>
+                    <li>20.5. Belgrade, SR</li>
+                </ul>
+            </div>
+            <button id="tickets">tickets</button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container columns">
+            <div id="form" class="column">
+                <h3>Contact form</h3>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message"></textarea>
+                </div>
+                <button id="send-message">Send message </button>
+            </div>
+            <div id="social" class="column">
+                <div class="icon">
+                    <span>bandemail@mail.com</span>
+                    <img src="./assets/icons8-mail-24.png">
+                </div>
+                <div class="icon">
+                    <span>+123456789</span>
+                    <img src="./assets/icons8-phone-50.png">
+                </div>
+                <div class="icon">
+                    <span><a href="#">instagram</a></span>
+                    <img src="./assets/icons8-instagram-24.png">
+                </div>
+                <div class="icon">
+                    <span><a href="#">facebook</a></span>
+                    <img src="./assets/icons8-facebook-24.png">
+                </div>
+                <div class="icon">
+                    <span><a href="#">youtube</a></span>
+                    <img src="./assets/icons8-youtube-24.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2022 Band Name
+    </footer>
+
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', () => {
+            document.getElementById('menu').classList.toggle('visible');
+        })
+    </script>
+
+</body>
+
+</html>

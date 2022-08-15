@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@200;500&display=swap');
+
+:root {
+    --light: whitesmoke;
+    --dark: rgb(11, 11, 53);
+    --light-blue: rgb(94, 131, 253);
+    --very-light-blue: rgb(183, 206, 255);
+    --hover: rgb(117, 117, 117);
+}
+
+* {
+    font-family: 'Lexend Zetta', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+section {
+    margin: 80px auto;
+    z-index: -3;
+    overflow: hidden;
+}
+
+.columns {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+}
+
+
+/* header */
+
+
+.background {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    z-index: -1;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.background img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.background::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(black, rgba(10, 46, 247, 0.144));
+    position: absolute;
+}
+
+header {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul {
+    display: flex;
+    margin-left: auto;
+}
+
+#menu-icon {
+    position: relative;
+    display: block;
+    padding: 10px;
+}
+
+#menu-icon::after {
+    color: var(--light);
+    content: 'menu';
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    display: block;
+}
+
+
+header li {
+    list-style: none;
+    padding: 10px;
+}
+
+header a {
+    color: var(--light);
+    text-decoration: none;
+    position: relative;
+    padding: 3px;
+}
+
+header li a::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 100%;
+    background-color: var(--light-blue);
+    margin: 0 auto;
+    z-index: -1;
+    transition: width 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+header li a:hover::after {
+    width: 100%;
+}
+
+
+.top h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--light);
+    font-size: 50px;
+    font-size: 5.2vw;
+}
+
+#scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    color: var(--light);
+    font-size: 36px;
+    opacity: 0.6;
+    text-decoration: none;
+    animation-name: scroll-bounce;
+    animation-duration: 2.3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+@keyframes scroll-bounce {
+    0% {
+        bottom: 10px;
+    }
+
+    50% {
+        bottom: 15px;
+    }
+
+    100% {
+        bottom: 10px;
+    }
+}
+
+
+
+/* about */
+
+
+#about .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#about .container div {
+
+    padding: 20px;
+}
+
+#about p {
+    padding: 10px 0;
+}
+
+#about img {
+    padding: 10px;
+    height: auto;
+    width: 100%;
+    align-self: center;
+}
+
+
+h2::after {
+    content: '';
+    width: 120%;
+    height: 20px;
+    position: absolute;
+    left: 25px;
+    bottom: -10px;
+    background-color: var(--light-blue);
+    z-index: -1;
+}
+
+h2 {
+    position: relative;
+    width: fit-content;
+    background-color: var(--very-light-blue);
+}
+
+
+/*   music  */
+
+#music {
+    background-color: var(--dark);
+    padding: 80px 0px;
+    position: relative;
+}
+
+
+#music .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#cover {
+    width: 100%;
+    flex: 0.5;
+    border: 20px solid var(--light-blue);
+    align-self: center;
+}
+
+#music li {
+    color: var(--light);
+    padding: 5px;
+}
+
+#music ol {
+    margin: 0 auto;
+}
+
+.songs {
+    text-align: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.songs h2 {
+    margin: 20px auto;
+}
+
+.platforms {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.platforms a {
+    color: var(--very-light-blue);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.platforms span {
+    margin: auto;
+    padding-left: 5px;
+}
+
+.platforms a img {
+    width: 30px;
+    filter: invert(1);
+    margin: auto 0;
+}
+
+.platforms a img:hover {
+    filter: invert(0.5);
+}
+
+
+/*   tour */
+
+
+#tour .container {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#tour h2 {
+    margin: 30px auto;
+}
+
+#tour ul {
+    margin: 20px;
+    list-style: none;
+}
+
+#tour ul li {
+    padding: 6px;
+}
+
+#tour .columns .column:first-of-type {
+    text-align: right;
+}
+
+#tickets {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--dark);
+    border: 3px solid var(--very-light-blue);
+    color: var(--very-light-blue);
+    cursor: pointer;
+}
+
+#tickets:hover {
+    color: var(--dark);
+    background-color: transparent;
+}
+
+
+/*   contact   */
+
+
+#contact {
+    color: var(--dark);
+    background-color: var(--light-blue);
+    padding: 40px;
+    margin: 0;
+}
+
+#contact h3 {
+    padding: 10px;
+    color: var(--light);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-weight: bold;
+    color: var(--light);
+}
+
+.form-group input,
+textarea {
+    background-color: var(--very-light-blue);
+    padding: 10px;
+    border: none;
+    color: var(--dark);
+}
+
+#send-message {
+    margin-left: auto;
+    margin-right: 10px;
+    display: flex;
+    color: var(--light);
+    background-color: var(--dark);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#send-message:hover {
+    background-color: var(--hover);
+}
+
+#social {
+    margin: auto 40px;
+}
+
+.icon {
+    justify-content: end;
+    display: flex;
+    cursor: pointer;
+    color: var(--light);
+    margin: 10px;
+}
+
+.icon a:hover,
+.icon span:hover {
+    color: var(--dark);
+}
+
+.icon a {
+    text-decoration: none;
+    color: var(--light);
+}
+
+.icon span {
+    margin: auto 0;
+    margin-left: 10px;
+}
+
+#social img {
+    width: 30px;
+    filter: invert();
+    opacity: 0.6;
+}
+
+
+
+/*   footer   */
+
+
+footer {
+    background-color: var(--dark);
+    color: var(--light);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 10px;
+}
+
+
+
+/*    mobile  */
+
+
+
+@media (max-width: 500px) {
+
+    #menu ul {
+        display: block;
+        left: 0;
+        top: 35px;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        text-align: center;
+        background-image: linear-gradient(black, rgba(0, 0, 0, 0.014));
+        transition: height 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    #menu.visible ul {
+        height: 300px;
+        display: block;
+    }
+
+    #menu.visible #menu-icon::after {
+        content: 'close';
+    }
+
+    header ul {
+        flex-direction: column;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    h2 {
+        margin: 0 auto;
+    }
+
+    #about p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    #cover {
+        margin-top: 20px;
+    }
+
+    .platforms {
+        flex-direction: column;
+    }
+
+    .platforms a {
+        margin: 0 auto;
+    }
+
+    #tour .columns .column:first-of-type {
+        text-align: center;
+    }
+
+    #tour .columns .column {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #contact {
+        padding: 10px;
+    }
+
+    .form-group {
+        padding: 10px 0;
+    }
+
+    #send-message {
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    #social {
+        margin: 20px auto;
+        width: fit-content;
+    }
+
+    .icon {
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .icon span {
+        margin-left: 0px;
+    }
+}
