@@ -38,6 +38,7 @@ section {
 
 .column {
     flex: 1;
+    overflow: hidden;
 }
 
 
@@ -185,7 +186,6 @@ header li a:hover::after {
 }
 
 #about .container div {
-
     padding: 20px;
 }
 
@@ -285,10 +285,6 @@ h2 {
     width: 30px;
     filter: invert(1);
     margin: auto 0;
-}
-
-.platforms a img:hover {
-    filter: invert(0.5);
 }
 
 
